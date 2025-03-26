@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import { getLocalStorage, setLocalStorage } from './utils.mjs';
-import ProductData from './ProductData.mjs';
-
-class ProductDetails {
-=======
 import { getLocalStorage, setLocalStorage } from "./utils.mjs";
 
 export default class ProductDetails {
 
->>>>>>> 0344e7e6385d1679687877192c4993a70c9d4241
   constructor(productId, dataSource) {
     this.productId = productId;
     this.product = {};
@@ -16,39 +9,6 @@ export default class ProductDetails {
   }
 
   async init() {
-<<<<<<< HEAD
-    // Fetch product details using the data source
-    this.product = await this.dataSource.findProductById(this.productId);
-    
-    // Render product details on the page
-    this.renderProductDetails();
-    
-    // Add event listener to 'Add to Cart' button
-    document.getElementById('addToCart')?.addEventListener('click', this.addProductToCart.bind(this));
-  }
-
-  addProductToCart() {
-    const cart = getLocalStorage('so-cart') || [];
-    cart.push(this.product);
-    setLocalStorage('so-cart', cart);
-  }
-
-  renderProductDetails() {
-    const productContainer = document.querySelector('#productDetails');
-    if (!productContainer || !this.product) return;
-    
-    productContainer.innerHTML = `
-      <h2>${this.product.Name}</h2>
-      <img src="${this.product.Image}" alt="${this.product.Name}">
-      <p>${this.product.Description}</p>
-      <p>Price: $${this.product.Price}</p>
-      <button id="addToCart" data-id="${this.product.Id}">Add to Cart</button>
-    `;
-  }
-}
-
-export default ProductDetails;
-=======
     // use the datasource to get the details for the current product. findProductById will return a promise! use await or .then() to process it
     this.product = await this.dataSource.findProductById(this.productId);
     // the product details are needed before rendering the HTML
@@ -85,4 +45,3 @@ function productDetailsTemplate(product) {
 
   document.getElementById('addToCart').dataset.id = product.Id;
 }
->>>>>>> 0344e7e6385d1679687877192c4993a70c9d4241
