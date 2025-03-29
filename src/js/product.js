@@ -8,14 +8,19 @@ const productID = getParam("product");
 const product = new ProductDetails(productID, dataSource);
 product.init();
 
-/* // add to cart button event handler
 async function addToCartHandler(e) {
   const product = await dataSource.findProductById(e.target.dataset.id);
   addProductToCart(product);
+}
+
+function addProductToCart(product) {
+  const cartItems = getLocalStorage('so-cart') || [];
+  cartItems.push(product);
+  setLocalStorage('so-cart', cartItems);
 }
 
 // add listener to Add to Cart button
 document
   .getElementById("addToCart")
   .addEventListener("click", addToCartHandler);
- */
+ 
