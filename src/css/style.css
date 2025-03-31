@@ -160,20 +160,47 @@ button {
   font-size: var(--small-font);
   color: white;
   font-weight: bold;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  padding: 0.3em 0.7em;
-  border-radius: 50px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe); /* Subtle gradient */
+  padding: 0.7em 1.3em;
+  border-radius: 25px;
   display: inline-block;
   margin-top: 0.5em;
   text-align: center;
-  box-shadow: 2px 2px 6px var(--dark-grey);
-  transform: rotate(-5deg);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.product-card__discount::before {
+  content: "Limited Time";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  background: #0078d7; /* Badge color */
+  color: white;
+  font-size: 0.7em;
+  font-weight: bold;
+  padding: 0.4em 0.8em;
+  transform: rotate(-45deg);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .product-card__discount:hover {
-  transform: rotate(0deg);
-  box-shadow: 3px 3px 8px var(--dark-grey);
+  background: linear-gradient(90deg, #00f2fe, #4facfe); /* Reverse gradient on hover */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+.product-card__discount span {
+  font-size: 1.4em;
+  font-weight: bold;
+  display: block;
+  margin-top: 0.3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 /* End product list card */
 

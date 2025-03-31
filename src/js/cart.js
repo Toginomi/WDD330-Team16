@@ -18,11 +18,29 @@ function cartItemTemplate(item) {
     <h2 class="card__name">${item.Name}</h2>
   </a>
   <p class="cart-card__color">${item.Colors[0].ColorName}</p>
-  <p class="cart-card__quantity">qty: 1</p>
+  <p class="cart-card__quantity">qty: ${item.quantity}</p>
   <p class="cart-card__price">$${item.FinalPrice}</p>
 </li>`;
 
   return newItem;
 }
 
-renderCartContents();
+function addToCart(item) {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const existingItem = cart.find(cartItem => cartItem.id === item.id);
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    item.quantity = 1;
+    cart.push(item);
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  // Re-render the cart contents
+  renderCartContents();
+}
+
+// Ensure the cart contents are rendered on page load
+document.addEventListener("DOMContentLoaded", renderCartContents);
