@@ -158,9 +158,9 @@ button {
 /* Discount styles */
 .product-card__discount {
   font-size: var(--small-font);
-  color: white;
+  color: #ffffff; /* Ensure text is white for contrast */
   font-weight: bold;
-  background: linear-gradient(90deg, #4facfe, #00f2fe); /* Subtle gradient */
+  background: linear-gradient(90deg, #0056b3, #0078d7); /* Accessible blue gradient */
   padding: 0.7em 1.3em;
   border-radius: 25px;
   display: inline-block;
@@ -179,8 +179,8 @@ button {
   position: absolute;
   top: -20px;
   left: -20px;
-  background: #0078d7; /* Badge color */
-  color: white;
+  background: #003a75; /* Darker blue for badge */
+  color: #ffffff; /* Ensure text is white for contrast */
   font-size: 0.7em;
   font-weight: bold;
   padding: 0.4em 0.8em;
@@ -190,7 +190,7 @@ button {
 }
 
 .product-card__discount:hover {
-  background: linear-gradient(90deg, #00f2fe, #4facfe); /* Reverse gradient on hover */
+  background: linear-gradient(90deg, #0078d7, #0056b3); /* Reverse gradient on hover */
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   transform: scale(1.1);
 }
@@ -200,7 +200,7 @@ button {
   font-weight: bold;
   display: block;
   margin-top: 0.3em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for readability */
 }
 /* End product list card */
 
