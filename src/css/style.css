@@ -160,13 +160,13 @@ button {
   font-size: var(--small-font);
   color: #ffffff; /* Ensure text is white for contrast */
   font-weight: bold;
-  background: linear-gradient(135deg, #ff6f61, #ff9966); /* Warm gradient for appeal */
+  background: linear-gradient(135deg, #0078d7, #0056b3); /* Professional blue gradient */
   padding: 0.8em 1.5em;
-  border-radius: 30px;
+  border-radius: 25px;
   display: inline-block;
   margin-top: 0.5em;
   text-align: center;
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
   letter-spacing: 1.2px;
@@ -175,32 +175,32 @@ button {
 }
 
 .product-card__discount::before {
-  content: "Hot Deal";
+  content: "Special Offer";
   position: absolute;
   top: -20px;
   left: -20px;
-  background: #cc4b37; /* Darker red for badge */
+  background: #003a75; /* Darker blue for badge */
   color: #ffffff; /* Ensure text is white for contrast */
   font-size: 0.8em;
   font-weight: bold;
   padding: 0.5em 1em;
   transform: rotate(-45deg);
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .product-card__discount:hover {
-  background: linear-gradient(135deg, #ff9966, #ff6f61); /* Reverse gradient on hover */
-  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #0056b3, #0078d7); /* Reverse gradient on hover */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   transform: scale(1.1);
 }
 
 .product-card__discount span {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: bold;
   display: block;
   margin-top: 0.3em;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Subtle shadow for readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for readability */
 }
 /* End product list card */
 
