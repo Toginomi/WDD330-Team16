@@ -154,6 +154,37 @@ button {
 .card__name {
   font-size: 1em;
 }
+
+.cart-card__remove {
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+  position: relative;
+}
+
+.cart-card__remove::after {
+  content: "Remove from cart";
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cart-card__remove:hover::after {
+  opacity: 1;
+}
+
+
+
 /* End product list card */
 
 .product-detail {
