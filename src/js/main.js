@@ -9,3 +9,7 @@ const element = document.querySelector(".product-list");
 const productList = new ProductList("Tents", dataSource, element);
 
 productList.init();
+
+function updateCartCount(count) {
+    document.querySelector(".cart-count").textContent = count;
+  }
