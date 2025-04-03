@@ -274,54 +274,42 @@ button {
 
 .signup-btn {
   margin-left: auto;
-  padding: 12px 25px; /* Adjusted padding for better proportions */
-  background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff6a65); /* Vibrant gradient */
+  padding: 12px 30px; /* Adjusted padding for better proportions */
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Fresh gradient */
   color: white;
   font-size: 1.1em; /* Slightly larger font size */
   font-weight: bold;
   text-decoration: none;
-  border-radius: 50px; /* Smooth rounded edges */
-  box-shadow: 0 4px 15px rgba(255, 105, 135, 0.4); /* Soft glowing shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border-radius: 30px; /* Smooth rounded edges */
+  border: 2px solid transparent; /* Transparent border for glowing effect */
+  box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4); /* Soft glowing shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   position: relative;
   overflow: hidden;
-  animation: pulse 2s infinite; /* Apply the pulsing animation */
-}
-
-.signup-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.3); /* Subtle shine effect */
-  transform: skewX(-45deg);
-  transition: left 0.5s ease;
-}
-
-.signup-btn:hover::before {
-  left: 100%;
+  animation: gradient-shift 3s infinite; /* Apply the gradient animation */
 }
 
 .signup-btn:hover {
   transform: scale(1.1); /* Slightly larger on hover */
-  box-shadow: 0 6px 20px rgba(255, 105, 135, 0.6); /* Brighter glow on hover */
-  background: linear-gradient(90deg, #ff6a65, #ff758c, #ff7eb3); /* Reverse gradient on hover */
+  box-shadow: 0 6px 20px rgba(37, 117, 252, 0.6); /* Brighter glow on hover */
+  border-color: rgba(255, 255, 255, 0.8); /* Glowing border on hover */
 }
 
 .signup-btn:active {
   transform: scale(0.95); /* Slightly smaller on click */
-  box-shadow: 0 3px 10px rgba(255, 105, 135, 0.3); /* Softer glow on click */
+  box-shadow: 0 3px 10px rgba(37, 117, 252, 0.3); /* Softer glow on click */
 }
 
-/* Add a pulsing animation for extra creativity */
-@keyframes pulse {
-  0%, 100% {
-    box-shadow: 0 4px 15px rgba(255, 105, 135, 0.4);
+/* Add a subtle gradient animation for extra creativity */
+@keyframes gradient-shift {
+  0% {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
   }
   50% {
-    box-shadow: 0 6px 20px rgba(255, 105, 135, 0.6);
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+  }
+  100% {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
   }
 }
 
