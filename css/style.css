@@ -1,0 +1,48 @@
+.sort-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border-radius: 15px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.sort-options label {
+  margin-right: 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.sort-options select {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.sort-options select:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #f0f0f0;
+}
+
+.sort-options select:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.sort-options select option {
+  font-size: 1rem;
+  font-weight: normal;
+}

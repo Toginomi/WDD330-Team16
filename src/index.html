@@ -57,14 +57,25 @@
     </section>
     <section class="products">
       <h2>Top Products</h2>
-      <ul class="product-list">
+      <div class="sort-options">
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+          <option value="name">Name</option>
+          <option value="price">Price</option>
+        </select>
+      </div>
+      <ul class="product-list" id="product-list">
         <li class="product-card">
           <a href="product_pages/?product=880RR">
             <img src="images/tents/marmot-ajax-tent-3-person-3-season-in-pale-pumpkin-terracotta~p~880rr_01~320.jpg"
               alt="Marmot Ajax tent" />
             <h3 class="card__brand">Marmot</h3>
             <h2 class="card__name">Ajax Tent - 3-Person, 3-Season</h2>
-            <p class="product-card__price">$199.99</p>
+            <p class="product-card__price">
+              <span class="original-price">$199.99</span>
+              <span class="discounted-price">$189.99</span>
+              <span class="discount-badge">5% OFF</span>
+            </p>
           </a>
         </li>
         <li class="product-card">
@@ -74,7 +85,11 @@
               alt="Talus Tent - 4-Person, 3-Season" />
             <h3 class="card__brand">The North Face</h3>
             <h2 class="card__name">Talus Tent - 4-Person, 3-Season</h2>
-            <p class="product-card__price">$199.99</p>
+            <p class="product-card__price">
+              <span class="original-price">$199.99</span>
+              <span class="discounted-price">$189.99</span>
+              <span class="discount-badge">5% OFF</span>
+            </p>
           </a>
         </li>
         <li class="product-card">
@@ -84,7 +99,11 @@
               alt="Alpine Guide Tent - 3-Person, 4-Season" />
             <h3 class="card__brand">The North Face</h3>
             <h2 class="card__name">Alpine Guide Tent - 3-Person, 4-Season</h2>
-            <p class="product-card__price">$349.99</p>
+            <p class="product-card__price">
+              <span class="original-price">$349.99</span>
+              <span class="discounted-price">$332.49</span>
+              <span class="discount-badge">5% OFF</span>
+            </p>
           </a>
         </li>
         <li class="product-card">
@@ -93,13 +112,38 @@
               alt="Rimrock Tent - 2-Person, 3-Season" />
             <h3 class="card__brand">Cedar Ridge</h3>
             <h2 class="card__name">Rimrock Tent - 2-Person, 3-Season</h2>
-            <p class="product-card__price">$69.99</p>
+            <p class="product-card__price">
+              <span class="original-price">$69.99</span>
+              <span class="discounted-price">$66.49</span>
+              <span class="discount-badge">5% OFF</span>
+            </p>
           </a>
         </li>
       </ul>
     </section>
   </main>
   <footer>&copy;NOT a real business</footer>
+  <script>
+    document.getElementById('sort').addEventListener('change', function () {
+      const sortBy = this.value;
+      const productList = document.getElementById('product-list');
+      const products = Array.from(productList.children);
+
+      products.sort((a, b) => {
+        if (sortBy === 'name') {
+          const nameA = a.querySelector('.card__name').textContent.trim();
+          const nameB = b.querySelector('.card__name').textContent.trim();
+          return nameA.localeCompare(nameB);
+        } else if (sortBy === 'price') {
+          const priceA = parseFloat(a.querySelector('.discounted-price').textContent.replace('$', ''));
+          const priceB = parseFloat(b.querySelector('.discounted-price').textContent.replace('$', ''));
+          return priceA - priceB;
+        }
+      });
+
+      products.forEach(product => productList.appendChild(product));
+    });
+  </script>
 </body>
 
 </html>

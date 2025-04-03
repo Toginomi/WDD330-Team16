@@ -176,6 +176,38 @@ button {
   font-size: 1em;
 }
 
+.product-card__price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: flex-start;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 0.9em;
+}
+
+.discounted-price {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 1.2em;
+}
+
+.discount-badge {
+  background-color: #ff6347;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 0.2rem;
+}
+
 /* End product list card */
 
 .product-detail {
