@@ -1,0 +1,88 @@
+body.signup-page {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px; /* Added padding for smaller screens */
+}
+
+.signup-container {
+    background: white;
+    padding: 15px; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 350px; /* Reduced max-width */
+}
+
+h1 {
+    font-size: 1.5em; /* Reduced font size */
+    margin-bottom: 10px; /* Reduced margin */
+    color: #444;
+}
+
+.form-group {
+    margin-bottom: 10px; /* Reduced margin */
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 3px; /* Reduced margin */
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 8px; /* Reduced padding */
+    margin: 3px 0; /* Reduced margin */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em; /* Reduced font size */
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #6a11cb;
+    box-shadow: 0 0 4px rgba(106, 17, 203, 0.3); /* Adjusted shadow */
+}
+
+button {
+    width: 100%;
+    padding: 8px; /* Reduced padding */
+    background: #6a11cb;
+    color: white;
+    font-size: 0.9em; /* Reduced font size */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background: #2575fc;
+    transform: scale(1.03); /* Slightly reduced scale */
+    box-shadow: 0 4px 10px rgba(37, 117, 252, 0.3); /* Added shadow effect */
+}
+
+.avatar-preview {
+    margin-top: 8px; /* Reduced margin */
+    border: 2px dashed #ddd;
+    padding: 8px; /* Reduced padding */
+    border-radius: 5px;
+    text-align: center;
+    color: #777;
+}
+
+.avatar-preview img {
+    max-width: 80%; /* Reduced size */
+    border-radius: 50%;
+}
