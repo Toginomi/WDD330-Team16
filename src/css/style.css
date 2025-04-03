@@ -35,19 +35,28 @@ header {
   padding: 0 10px;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align items to the right */
+  gap: 15px;
+  flex-grow: 1; /* Allow the actions to take up remaining space */
+}
+
 .logo {
   line-height: 60px;
-  width: 245px;
-  overflow: hidden;
+  width: auto; /* Adjust width to fit the content */
   display: flex;
+  align-items: center; /* Align logo vertically */
   font-size: 30px;
-  text-align: right;
+  text-align: left; /* Align text to the left */
   font-family: var(--font-headline);
 }
 
 .logo img {
   width: 60px;
   height: 60px;
+  margin-right: 10px; /* Add spacing between the image and text */
 }
 
 .logo a {
@@ -258,6 +267,53 @@ button {
   grid-column: 3;
 }
 
+.hero-signup {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.signup-btn {
+  margin-left: auto;
+  padding: 10px 20px; /* Reduced padding */
+  background: linear-gradient(45deg, #28a745, #218838);
+  color: white;
+  font-size: 1em; /* Reduced font size */
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px; /* Adjusted border radius */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-45deg);
+  transition: left 0.5s ease;
+}
+
+.signup-btn:hover::before {
+  left: 100%;
+}
+
+.signup-btn:hover {
+  transform: scale(1.05); /* Slightly reduced hover scale */
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.signup-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Add a subtle bounce animation */
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
